@@ -1,1 +1,3 @@
-console.log('Hello');
+import { createContext, runInContext } from 'vm'
+
+runInContext('console.log("Hello, VM");', createContext({ console }))
